@@ -1,5 +1,8 @@
 ---
-title: "Main page test"
+title: "Yes, But How?"
+layout: 'layouts/home.html'
 ---
 
-Hello world.
+# Hello world.
+
+testing testing.
