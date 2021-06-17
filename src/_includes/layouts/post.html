@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+
+<h2>{{ title }}</h2>
+<p>{{ date }}</p>
+<!-- add tags here -->
+
+
+{{ content | safe }}
+
+{% endblock %}

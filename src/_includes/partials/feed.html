@@ -1,0 +1,10 @@
+<h2>{{feedSection.title}}</h2>
+
+{% for item in collections.posts.slice(0,5) %}
+<article>
+    <a href="{{ item.url }}" class="" data-frame="quaternary">{{item.data.title}}
+    </a>
+</article>
+{% endfor %}
+
+<a href="/tags">More Posts</a>
