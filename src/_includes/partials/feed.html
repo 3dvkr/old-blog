@@ -1,10 +1,16 @@
 <h2>{{feedSection.title}}</h2>
 
-{% for item in collections.posts.slice(0,5) %}
-<article>
-    <a href="{{ item.url }}" class="" data-frame="quaternary">{{item.data.title}}
-    </a>
-</article>
-{% endfor %}
+<section class="feed-box">
+    {% for item in collections.posts.slice(0,5) %}
+    <p class="date">{{ item.data.date }}</p>
+    <article>
+        <p class="blog-title">
+            <a href="{{ item.url }}" class="" data-frame="quaternary">{{item.data.title}}
+            </a> 
+        </p>
+        <p>{{ item.data.excerpt }}</p>
+    </article>
+    {% endfor %}
+</section>
 
 <a href="/tags">More Posts</a>

@@ -1,5 +1,6 @@
-*{
+* {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box
 }
 
 main, header {
@@ -10,7 +11,7 @@ main, header {
 nav, ul {
     list-style: none;
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-between;
     align-items: center;
 }
 li {
@@ -19,4 +20,12 @@ li {
 
 .site_title {
     font-size: larger;
+}
+
+/* layout */
+
+.feed-box {
+    display: grid;
+    grid-template-columns: 15fr 85fr;
+    gap: 3ch;
 }
