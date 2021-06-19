@@ -1,8 +1,13 @@
 * {
     font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     box-sizing: border-box;
-    line-height: 1.4;
+    line-height: 1.6;
 }
+pre[class*="language-"], code {
+    font-size:smaller;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular','Andale Mono', 'Ubuntu Mono', monospace;
+}
+code {font-weight: 600;}
 .site_title {
     font-size: larger;
 }
@@ -15,18 +20,18 @@
 
 /* layout --------------------------------------- */
 main, header {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-nav, ul {
+nav, .nav-list {
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-li {
+.nav-list li {
     padding-left: 2rem;
 }
 
