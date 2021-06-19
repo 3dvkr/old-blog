@@ -1,11 +1,23 @@
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    box-sizing: border-box
+    font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+.site_title {
+    font-size: larger;
+}
+.date {
+    font-family: 
+        /* "Andalé Mono",  */
+        "American Typewriter",
+        monospace;
 }
 
+/* layout --------------------------------------- */
 main, header {
     max-width: 600px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 nav, ul {
@@ -17,12 +29,6 @@ nav, ul {
 li {
     padding-left: 2rem;
 }
-
-.site_title {
-    font-size: larger;
-}
-
-/* layout */
 
 .feed-box {
     display: grid;

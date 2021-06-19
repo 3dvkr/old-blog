@@ -2,7 +2,7 @@
 
 <section class="feed-box">
     {% for item in collections.posts.slice(0,5) %}
-    <p class="date">{{ item.data.date }}</p>
+    <p class="date">{{ item.data.date.toDateString() }}</p>
     <article>
         <p class="blog-title">
             <a href="{{ item.url }}" class="" data-frame="quaternary">{{item.data.title}}

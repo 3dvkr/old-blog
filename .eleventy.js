@@ -1,4 +1,5 @@
 module.exports = config => {
+
     config.addPassthroughCopy('./src/css/');
     config.addWatchTarget("./src/css/");
 
