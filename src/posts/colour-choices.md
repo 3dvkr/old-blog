@@ -1,7 +1,7 @@
 ---
 title: "Confusing colour choices"
 date: 2020-12-28
-tags: ["UX"]
+tags: ["ux"]
 excerpt: "Here's a question that should be simple enough: which of these two options is selected?"
 ---
 

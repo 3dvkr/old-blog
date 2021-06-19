@@ -44,6 +44,11 @@ nav, .nav-list {
 .excerptP {
     padding-left: 1rem;
 }
+#availableTags {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
 
 /* Styles --------------- */
 .excerptP {

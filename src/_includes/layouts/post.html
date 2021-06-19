@@ -3,9 +3,13 @@
 
 <h2>{{ title }}</h2>
 <p>{{ date.toDateString() }}</p>
-<!-- add tags here -->
-
+<p>Tags: 
+    {% for tag in tags %}
+        <a href="/tags/#{{tag}}">{{ tag }}</a>
+    {% endfor %}
+</p>
 <p>{{ excerpt }}</p>
 <p>{{ content | safe }}</p>
+
 <p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href={{ site.items.twitter }}>Twitter</a>.</p>
 {% endblock %}
