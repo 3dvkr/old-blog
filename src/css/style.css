@@ -32,6 +32,15 @@ li {
 
 .feed-box {
     display: grid;
-    grid-template-columns: 15fr 85fr;
+    grid-template-columns: 30fr 70fr;
     gap: 3ch;
+}
+
+.excerptP {
+    padding-left: 1rem;
+}
+
+/* Styles --------------- */
+.excerptP {
+    font-style: italic;
 }
