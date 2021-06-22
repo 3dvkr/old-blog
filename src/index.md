@@ -5,6 +5,3 @@ feedSection:
     title: 'Latest Posts'
 ---
 
-# Hello world.
-
-testing testing.
