@@ -54,3 +54,25 @@ nav, .nav-list {
 .excerptP {
     font-style: italic;
 }
+a {
+    color:
+}
+/* Dark mode ------------ */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: hsl(240, 13%, 17%);
+        color: hsl(48, 33%, 97%);
+    }
+
+    a {
+        /* color: hsl(209, 100%, 67%); */
+        color: hsl(130, 55%, 60%);
+    }
+    a:hover {
+        color: hsl(217, 80%, 90%);
+        
+    }
+}
+
+/* --light-accent: rgb(230, 170, 59);
+--light: hsla(0, 17%, 88%, 1); */

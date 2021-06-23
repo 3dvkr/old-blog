@@ -2,7 +2,7 @@
 {% block content %}
 
 <h2>{{ title }}</h2>
-<p>{{ date.toDateString() }}</p>
+<p class="date">{{ date.toDateString() }}</p>
 <p>Tags: 
     {% for tag in tags %}
         <a href="/tags/#{{tag}}">{{ tag }}</a>
