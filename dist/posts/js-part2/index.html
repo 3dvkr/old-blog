@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      
+        JavaScript Part 2: how do we juggle information and why would we want to? -- 
+      
+      Yes, But How?
+    </title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
+  </head>
+  <body>
+    <header>
+    <nav aria-label="Primary">
+        <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
+        <ul class="nav-list">
+            
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            
+            <li>
+              <a href="/tags/">Tags</a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+    <main tabindex="-1" id="main-content">
+      
+
+<h2>JavaScript Part 2: how do we juggle information and why would we want to?</h2>
+<p class="date">Mon Feb 15 2021</p>
+<p>Tags: 
+    
+        <a href="/tags/#javascript">javascript</a>
+    
+</p>
+<p>This is a syntax-focused sprint that delves into functions, expanding on the code from Part 1.</p>
+<h2>Who is this for?</h2>
+<p>This post is for anyone who read <a href="/posts/js_part1">Part 1</a>, or anyone new to JavaScript. The style is more exploratory than step-by-step. All the pointers and tips from Part 1 apply here.</p>
+<p>Just like in Part 1, this post assumes no previous computer programming background. It's a sprint. Google fast, Google often.</p>
+<h2>'Juggling information?'</h2>
+<p>We'll take some 'starter' pieces of information, or inputs, and carry out a series of steps or instructions. Those instructions might, for example, update the information, reset values, create new information, among other things.</p>
+<h2>Why functions?</h2>
+<p>If we spell out the steps to juggle information each time we need those steps, and we changed our minds later about what those steps are, we have to hunt down every time we wrote out those steps to make those changes. That'd be frustrating.</p>
+<p>A function is a way for us to write down the information-juggling steps <em>once</em>, before we even know exactly what information we'll be juggling.</p>
+<p>If we're going to pull this off, we'll need:</p>
+<ol>
+<li>a way to point to those steps from anywhere in our code</li>
+<li>a way to write those information-juggling steps without knowing the specifics of that information</li>
+<li>a way to feed in our information into these instructions once we know the specifics</li>
+</ol>
+<h2>Using functions that other people wrote</h2>
+<h3>e.g. #1: <code>console.log</code></h3>
+<p>If you run JavaScript code in a browser or Node.js, you have access to the <code>console</code> object. The browser and Node.js environments have a console, and provide us with a pre-defined <code>console</code> object. It comes with properties and methods related to our console. One of these methods is <code>console.log</code>, and its job is to write out strings in the console. If you haven't tried this yet, enter this code snippet into your console: <code>console.log(&quot;Hello World!&quot;)</code>.</p>
+<p>Let's see how <code>console.log</code> holds up against our requirements from earlier:</p>
+<ol>
+<li>
+<p>We point to the instructions--write out a string in the console--by first pointing to the <code>console</code> object, and then pointing to the method inside the object, because that's where the instructions are stored.</p>
+</li>
+<li>
+<p>Other people wrote the instructions for us.</p>
+</li>
+<li>
+<p>After pointing to the method by writing <code>console.log</code>, we feed our input <code>&quot;Hello world!&quot;</code> string in between two parentheses <code>()</code>.</p>
+</li>
+</ol>
+<h3>e.g. #2: <code>Math.random</code></h3>
+<p>There's another object that ships with JavaScript, called <code>Math</code>. It gives you access to methods related to doing math, like getting a random number. To try this in your console, type <code>Math.random()</code> and hit Enter. So how does this meet our requirements:</p>
+<ol>
+<li>
+<p>&quot;Get a random number from 0 to 1 and return it&quot; are the instructions for the <code>Math.random</code> function. We point to those instructions by pointing to the <code>Math</code> object, and then pointing to the <code>random</code> method.</p>
+</li>
+<li>
+<p>Other people wrote the instructions for us.</p>
+</li>
+<li>
+<p>We...don't need inputs?</p>
+</li>
+</ol>
+<h2>So what are the parentheses actually doing?</h2>
+<p>We've used the parentheses to house the inputs when they're needed, but that isn't the main job of the parentheses. When we use parentheses after the function or method's name, we're <em>calling</em> the function. In other words, we're asking it to run through its instructions. This means even if our function doesn't need inputs, we still need to include parentheses after the function's name in order for it to run.</p>
+<h2>There's another way these two functions are different.</h2>
+<p>Both functions printed something out in the console, but lets look more closely at the outputs. <code>console.log</code> prints out string, as per its instructions, and it also prints out a <em>return value</em> of <code>undefined</code>. <code>Math.random</code> just prints out the return value, a random number. The reason <code>console.log</code> prints a string is because that's what its instructions tell it to do. It will also need to print the return value--the <code>console.log</code> function does not return anything, so the default of <code>undefined</code> gets printed. <code>Math.random</code> does not have any instructions to print anything, but it <em>does</em> have instructions to return a random number. A function call boils down to its return value, which can be assigned to a variable.</p>
+<p>We have no idea what these functions' instructions look like, and we don't really need to know. We can search for or look up what we need to feed into the function--if anything--and what we can expect the function to return--if anything.</p>
+<h2>Functions that we can write ourselves</h2>
+<p>This is a function that multiplies a number of our choosing by two. It's entirely unnecessary, since we can just write <code>* 2</code> after our number, but we'll use the function to focus on syntax.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">timesTwo</span><span class="token punctuation">(</span><span class="token parameter">inputNumber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">return</span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>We need the keyword <code>function</code> to tell JavaScript that we're writing/defining/establishing, or <em>declaring</em>, a function. We write out what its instructions are in the <em>function body</em>. We section off the function body from the rest of the code by writing it in between the curly braces, <code>{}</code>.</p>
+<p>Going back to our three requirements:</p>
+<ol>
+<li>Point to the instructions by naming them (e.g. '<code>timesTwo</code>'). The name goes immediately before the <code>()</code>.</li>
+<li>We feed in dummy variables, called <em>parameters</em>. They stand in for the actual inputs we'll use when we call the function, because we don't know what the actual inputs are right now. We're deciding to have one parameter in the code snippet above, called <code>inputNumber</code>.</li>
+<li>We feed in the parameter to the instructions by writing it in between <code>()</code>.</li>
+</ol>
+<p>To try this out, first define the <code>timesTwo</code> function in the console using the code above. The console is capable of handling multi-line code snippets. Then, try calling the function with an input number you can choose. Here's one example with <code>4</code> as the argument:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">timesTwo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// should return 8</span></code></pre>
+<h2>Parameters vs. Arguments</h2>
+<p>They both represent the information being fed into a function, so it's tempting to use them interchangeably. Here's the difference:</p>
+<p>Use the term 'parameter' when you're declaring a function--it's a variable that is standing in for actual inputs. Use the term 'argument' when you're calling the function--you can write the information directly into the function (as we did above), or you can write the name of a variable which has that information assigned to it.</p>
+<p>In the function declaration for <code>timesTwo</code>, the parameter was <code>inputNumber</code>. In the function call, the <code>argument</code> was 4. If you're passing in a variable, name it something different than the parameters from the function declaration. This is a good habit to start building while the code is still only a handful of lines. Here's the same function call with a variable as an argument:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> testNumber <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br><span class="token function">timesTwo</span><span class="token punctuation">(</span>testNumber<span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre>
+<h2>Function Expressions</h2>
+<p>They're another way to write functions. This might feel more pointless and unnecessary than writing a function to multiply by two, and as a beginner, that's a fair response. There are situations where they come in handy, and it's tough to expand on those situations with the information from Part 1 and Part 2.</p>
+<p>We declare a <em>variable</em>, and assign a function to that variable, like we would assign a string or object. We can leave blank the area where we'd normally write the function's name, because the variable's name is how we'll refer to the function.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">timesTwo</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">inputNumber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>                    <span class="token keyword">return</span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span><br>                  <span class="token punctuation">}</span></code></pre>
+<p>The space between <code>function</code> and the <code>()</code> is optional.</p>
+<h2>Arrow Functions</h2>
+<p>This is yet another way to write functions. We'll start with the syntax from the function expressions section. Remove the word <code>function</code> entirely. We will instead tell JavaScript that this is a function by adding a <code>=&gt;</code> arrow in between the <code>(...)</code> and <code>{...}</code>.</p>
+<p>e.g.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">timesTwo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">inputNumber</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token keyword">return</span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">}</span></code></pre>
+<p>The aim of this syntax is to be less bulky, so it gives us two more options:</p>
+<ul>
+<li>leave out the <code>{}</code> brackets <em>and</em> <code>return</code>--do both or do neither--when the function only has one line</li>
+<li>leave out the <code>()</code> brackets when the function needs one parameter--they're required for multiple parameters and zero parameters</li>
+</ul>
+<p>The function from above becomes:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">timesTwo</span> <span class="token operator">=</span> <span class="token parameter">inputNumber</span> <span class="token operator">=></span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span></code></pre>
+<h2>How much juggling should one function do?</h2>
+<p>One function should accomplish one task. In other words, you should be able to tell someone what a function does in one short sentence.</p>
+<p>e.g.</p>
+<ul>
+<li>&quot;Prints a string to the console.&quot;</li>
+<li>&quot;Returns a random number.&quot;</li>
+<li>&quot;Multiplies a number by two.&quot;</li>
+</ul>
+<p>The whole strategy with functions is to make code more bite-sized, so that it's easier to maintain, understand, and debug. If one function handles multiple complex juggling manuevers, it can be broken into multiple simpler functions.</p>
+<p>At this point, all functions from <a href="/posts/js-part1">JavaScript Part 1</a> are covered, except <code>Chicken()</code> . I'll need another blog post to explain how functions can create objects. Part 3 goes over the ideas covered here in the context of two functions.</p>
+<h2>Closing thoughts</h2>
+<p>Part 1 covered how we hold on to information. Part 2 has just covered how to manage doing things with that information. This was at an introductory level, and hopefully it leaves you better-equipped to understand, write, and use functions for actual web dev situations.</p>
+
+
+<p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
+
+    </main>
+
+  </body>
+</html>

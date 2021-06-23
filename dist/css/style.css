@@ -1,0 +1,70 @@
+* {
+    font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+pre[class*="language-"], code {
+    font-size:smaller;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular','Andale Mono', 'Ubuntu Mono', monospace;
+}
+code {font-weight: 600;}
+.site_title {
+    font-size: larger;
+}
+.date {
+    font-family: 
+        /* "Andalé Mono",  */
+        "American Typewriter",
+        monospace;
+}
+
+/* layout --------------------------------------- */
+main, header {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+nav, .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list li {
+    padding-left: 2rem;
+}
+
+.feed-box {
+    display: grid;
+    grid-template-columns: 30fr 70fr;
+    gap: 3ch;
+}
+
+.excerptP {
+    padding-left: 1rem;
+}
+#availableTags {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+/* Styles --------------- */
+.excerptP {
+    font-style: italic;
+}
+a {
+    color: hsl(191, 43%, 49%);
+}
+/* Dark mode ------------ */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: hsl(150, 5%, 15%);
+        color: hsl(48, 33%, 97%);
+    }
+
+    a:hover {
+        color: hsl(217, 80%, 90%);
+    }
+}
