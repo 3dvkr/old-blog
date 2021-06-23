@@ -9,7 +9,7 @@
     {% endfor %}
 </p>
 <p>{{ excerpt }}</p>
-<p>{{ content | safe }}</p>
+{{ content | safe }}
 
 <p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href={{ site.items.twitter }}>Twitter</a>.</p>
 {% endblock %}
