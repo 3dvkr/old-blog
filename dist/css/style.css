@@ -1,7 +1,7 @@
 * {
     font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     box-sizing: border-box;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 pre[class*="language-"], code {
     font-size:smaller;
@@ -20,7 +20,7 @@ code {font-weight: 600;}
 
 /* layout --------------------------------------- */
 main, header {
-    max-width: 650px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 1rem;
 }

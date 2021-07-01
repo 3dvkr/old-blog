@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      
+        How I come up with CSS from scratch -- 
+      
+      Yes, But How?
+    </title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
+  </head>
+  <body>
+    <header>
+    <nav aria-label="Primary">
+        <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
+        <ul class="nav-list">
+            
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            
+            <li>
+              <a href="/tags/">Tags</a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+    <main tabindex="-1" id="main-content">
+      
+
+<h2>How I come up with CSS from scratch</h2>
+<p class="date">Sun Jun 13 2021</p>
+<p>Tags: 
+    
+        <a href="/tags/#css">css</a>
+    
+</p>
+<p>I&#39;ve come up with a few rules of thumb to keep my stylesheets organized.</p>
+<p>This has worked well for smaller-sized projects. For more complex apps, a methodology like BEM or even a CSS framework might be a better option.</p>
+<h2>Mobile first</h2>
+<p>Websites, especially with semantically correct HTML, naturally have the elements in a column. This works really well for small screens.</p>
+<p>If I wrote CSS with a desktop-first approach, I'd be changing the layout to have certain elements side-by-side, only to undo this for smaller screens in a media query. With mobile-first, I only write the side-by-side layout rules in a media query for larger screens. In other words, I write less code that is easier to maintain.</p>
+<h2>Starting structure</h2>
+<p>I copy and paste Normalize and Reset at the start of my CSS. Next comes any rules I write that affect the layout of the page. This is anything involving margin, padding, and display. Then I write any rules affecting the styling--text decoration, hover effects, border styling and shapes, etc. These rules are separate from the layout rules section. This may mean I have multiple rules for the same selector, but it makes debugging considerably easier.</p>
+<h2>Extras</h2>
+<p>There are separate sections for:</p>
+<ul>
+<li>rules that I add and remove with JavaScript (e.g. <code>.hide {display:none;}</code>)</li>
+<li>rules that control animations or transitions</li>
+<li>media queries</li>
+</ul>
+
+
+<p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
+
+    </main>
+
+  </body>
+</html>

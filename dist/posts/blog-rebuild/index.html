@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      
+        I rebuilt my blog from scratch using 11ty -- 
+      
+      Yes, But How?
+    </title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
+  </head>
+  <body>
+    <header>
+    <nav aria-label="Primary">
+        <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
+        <ul class="nav-list">
+            
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            
+            <li>
+              <a href="/tags/">Tags</a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+    <main tabindex="-1" id="main-content">
+      
+
+<h2>I rebuilt my blog from scratch using 11ty</h2>
+<p class="date">Sun Jun 27 2021</p>
+<p>Tags: 
+    
+        <a href="/tags/#project">project</a>
+    
+</p>
+<p>Isn&#39;t it shiny?</p>
+<p>My blog used to use Jekyll. I'd set it up before I even knew how GitHub worked. I used a theme, which got my blog up and running quickly, but was difficult to customize. Things got hacky and disorganized. I wanted a better workflow, and I wanted more control over what files my static site generator was outputing.</p>
+<p>Then Piccalil.li tweeted that his thirty-one-part tutorial on 11ty was available for free. I went through it from start to finish. To build this blog, I only needed parts 1-8, 10, and 12, but it was still very useful to have gone through the entire tutorial. I hit a speed bump when I went to deploy on GitHub Pages--the relative links weren't working, but the <code>url</code> filter fixed that. In addition to the tutorial, Stephanie Eckles' 11ty.rocks site and youtube videos helped a lot of things click.</p>
+<p>Here's what I like about my new 11ty setup so far:</p>
+<h2>It's lightweight</h2>
+<p>My entire output folder is under 300kB. Roughly, that means each HTML file generated averages 26kB. This isn't necessarily a result of using 11ty. I avoid images whenever possible. There is no client-side JavaScript (yet). I opted for inbuilt browser fonts, and wrote my own CSS with only the styles I need.</p>
+<p>A lightweight site is accessible to more people, on more kinds of connections, on more devices, and pollutes less (see link below).</p>
+<h2>It's easy to update and deploy</h2>
+<p>I have my output folder on a branch, <code>gh-pages</code>, in my blog's repo separate from the source code. I set GitHub Pages to deploy <code>gh-pages</code> instead of <code>main</code>. I run 11ty locally after writing a new blog post, push the output folder to <code>gh-pages</code>, and my blog is updated.</p>
+<h2>It uses markdown</h2>
+<p>I write my blog posts in markdown. There is a front matter section at the beginning of each file, which lets me label different information. I can use labels that 11ty already knows. For example, <code>layout: &lt;name of layout&gt;</code> is the way I choose what HTML goes around my markdown file's content to generate that blog post's page. I can also pick labels I need, and specify where that information should go in the layout I picked. It lets me focus on the content, because I've already set up where it should show up, and how I want it styled when I made the layouts.</p>
+<h2>It displays code snippets and chunks nicely</h2>
+<p>Prism.js was surprisingly painless to use. I added the JavaScript to the <code>head</code> section of my base layout, so that Prism.js is available on every page that 11ty generates. That makes anything between a pair of three backticks show up as code. As long as I keep each line of code from getting too long (e.g. by chaining too many array methods), it's fairly pleasant to read.</p>
+<h2>It has the option to add more features</h2>
+<p>With the volume of posts I have, my current set up works fine. As I write more, I could see navigation becoming an issue. I could automate some things. It would be nice to have an archive page by months, more collections/groupings of posts, and an RSS feed. I've skimmed the docs on these features, and they seem like manageable and modular additions to what I've got so far.</p>
+<h2>Links</h2>
+<ul>
+<li><a href="https://piccalil.li/course/learn-eleventy-from-scratch/">Picalil.li's course</a></li>
+<li><a href="https://11ty.rocks">11ty.rocks</a></li>
+<li>[Stephanie Eckles' video] (https://www.youtube.com/watch?v=KKSEs0m6eVY)</li>
+<li>The case for <a href="https://branch.climateaction.tech/issues/issue-1/hands-on-sustainable-web-design/">sustainable web design</a></li>
+</ul>
+
+
+<p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
+
+    </main>
+
+  </body>
+</html>
