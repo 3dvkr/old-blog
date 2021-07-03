@@ -57,6 +57,9 @@ nav, .nav-list {
 a {
     color: hsl(191, 43%, 49%);
 }
+a:hover {
+    color: hsl(202, 96%, 19%);
+}
 /* Dark mode ------------ */
 @media (prefers-color-scheme: dark) {
     html {
@@ -66,5 +69,9 @@ a {
 
     a:hover {
         color: hsl(217, 80%, 90%);
+    }
+
+    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+        background: hsl(70, 8%, 11%);
     }
 }
