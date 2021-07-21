@@ -135,7 +135,7 @@ e.g.
 
 The whole strategy with functions is to make code more bite-sized, so that it's easier to maintain, understand, and debug. If one function handles multiple complex juggling manuevers, it can be broken into multiple simpler functions.
 
-At this point, all functions from [JavaScript Part 1](/posts/js-part1) are covered, except `Chicken()` . I'll need another blog post to explain how functions can create objects. Part 3 goes over the ideas covered here in the context of two functions.
+At this point, all functions from [JavaScript Part 1](/posts/js-part1) are covered, except `Chicken()` . I'll need another blog post to explain how functions can create objects. Part 3 goes over the ideas covered here in the context of two new functions.
 
 
 ## Closing thoughts
