@@ -3,11 +3,12 @@
     box-sizing: border-box;
     line-height: 1.7;
 }
-pre[class*="language-"], code {
-    font-size:smaller;
+pre, code, .token {
     font-family: 'Lucida Sans', 'Lucida Sans Regular','Andale Mono', 'Ubuntu Mono', monospace;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
-code {font-weight: 600;}
+
 .site_title {
     font-size: larger;
 }
@@ -63,7 +64,7 @@ a:hover {
 /* Dark mode ------------ */
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: hsl(150, 5%, 15%);
+        background-color: hsl(150, 10%, 15%);
         color: hsl(48, 33%, 97%);
     }
 
@@ -71,7 +72,9 @@ a:hover {
         color: hsl(217, 80%, 90%);
     }
 
-    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    /* :not(pre) > code[class*="language-"],  */
+    /* pre[class*="language-"],  */
+    pre {
         background: hsl(70, 8%, 11%);
     }
 }
