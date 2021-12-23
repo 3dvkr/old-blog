@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
       
-        JavaScript Part 2: how do we juggle information and why would we want to? -- 
+        JavaScript Part 2: how do we juggle information and why would we want to? — 
       
       Yes, But How?
     </title>
@@ -65,7 +65,7 @@
 <p>Let's see how <code>console.log</code> holds up against our requirements from earlier:</p>
 <ol>
 <li>
-<p>We point to the instructions--write out a string in the console--by first pointing to the <code>console</code> object, and then pointing to the method inside the object, because that's where the instructions are stored.</p>
+<p>We point to the instructions—write out a string in the console—by first pointing to the <code>console</code> object, and then pointing to the method inside the object, because that's where the instructions are stored.</p>
 </li>
 <li>
 <p>Other people wrote the instructions for us.</p>
@@ -90,8 +90,8 @@
 <h2>So what are the parentheses actually doing?</h2>
 <p>We've used the parentheses to house the inputs when they're needed, but that isn't the main job of the parentheses. When we use parentheses after the function or method's name, we're <em>calling</em> the function. In other words, we're asking it to run through its instructions. This means even if our function doesn't need inputs, we still need to include parentheses after the function's name in order for it to run.</p>
 <h2>There's another way these two functions are different.</h2>
-<p>Both functions printed something out in the console, but lets look more closely at the outputs. <code>console.log</code> prints out string, as per its instructions, and it also prints out a <em>return value</em> of <code>undefined</code>. <code>Math.random</code> just prints out the return value, a random number. The reason <code>console.log</code> prints a string is because that's what its instructions tell it to do. It will also need to print the return value--the <code>console.log</code> function does not return anything, so the default of <code>undefined</code> gets printed. <code>Math.random</code> does not have any instructions to print anything, but it <em>does</em> have instructions to return a random number. A function call boils down to its return value, which can be assigned to a variable.</p>
-<p>We have no idea what these functions' instructions look like, and we don't really need to know. We can search for or look up what we need to feed into the function--if anything--and what we can expect the function to return--if anything.</p>
+<p>Both functions printed something out in the console, but lets look more closely at the outputs. <code>console.log</code> prints out string, as per its instructions, and it also prints out a <em>return value</em> of <code>undefined</code>. <code>Math.random</code> just prints out the return value, a random number. The reason <code>console.log</code> prints a string is because that's what its instructions tell it to do. It will also need to print the return value—the <code>console.log</code> function does not return anything, so the default of <code>undefined</code> gets printed. <code>Math.random</code> does not have any instructions to print anything, but it <em>does</em> have instructions to return a random number. A function call boils down to its return value, which can be assigned to a variable.</p>
+<p>We have no idea what these functions' instructions look like, and we don't really need to know. We can search for or look up what we need to feed into the function—if anything—and what we can expect the function to return—if anything.</p>
 <h2>Functions that we can write ourselves</h2>
 <p>This is a function that multiplies a number of our choosing by two. It's entirely unnecessary, since we can just write <code>* 2</code> after our number, but we'll use the function to focus on syntax.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">timesTwo</span><span class="token punctuation">(</span><span class="token parameter">inputNumber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">return</span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
@@ -106,7 +106,7 @@
 <pre class="language-javascript"><code class="language-javascript"><span class="token function">timesTwo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// should return 8</span></code></pre>
 <h2>Parameters vs. Arguments</h2>
 <p>They both represent the information being fed into a function, so it's tempting to use them interchangeably. Here's the difference:</p>
-<p>Use the term 'parameter' when you're declaring a function--it's a variable that is standing in for actual inputs. Use the term 'argument' when you're calling the function--you can write the information directly into the function (as we did above), or you can write the name of a variable which has that information assigned to it.</p>
+<p>Use the term 'parameter' when you're declaring a function—it's a variable that is standing in for actual inputs. Use the term 'argument' when you're calling the function—you can write the information directly into the function (as we did above), or you can write the name of a variable which has that information assigned to it.</p>
 <p>In the function declaration for <code>timesTwo</code>, the parameter was <code>inputNumber</code>. In the function call, the <code>argument</code> was 4. If you're passing in a variable, name it something different than the parameters from the function declaration. This is a good habit to start building while the code is still only a handful of lines. Here's the same function call with a variable as an argument:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> testNumber <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br><span class="token function">timesTwo</span><span class="token punctuation">(</span>testNumber<span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre>
 <h2>Function Expressions</h2>
@@ -120,8 +120,8 @@
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">timesTwo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">inputNumber</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token keyword">return</span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">}</span></code></pre>
 <p>The aim of this syntax is to be less bulky, so it gives us two more options:</p>
 <ul>
-<li>leave out the <code>{}</code> brackets <em>and</em> <code>return</code>--do both or do neither--when the function only has one line</li>
-<li>leave out the <code>()</code> brackets when the function needs one parameter--they're required for multiple parameters and zero parameters</li>
+<li>leave out the <code>{}</code> brackets <em>and</em> <code>return</code>—do both or do neither—when the function only has one line</li>
+<li>leave out the <code>()</code> brackets when the function needs one parameter—they're required for multiple parameters and zero parameters</li>
 </ul>
 <p>The function from above becomes:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">timesTwo</span> <span class="token operator">=</span> <span class="token parameter">inputNumber</span> <span class="token operator">=></span> inputNumber <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span></code></pre>
