@@ -23,6 +23,9 @@ module.exports = config => {
         });
         return Array.from(tagsSet)
     });
+    config.addCollection('featured', collection => {
+        return collection.getAll().filter(item => item.data.featured).sort((postA, postB) => +postA.data.featured - +postB.data.featured);
+    })
 
     return {
         markdownTemplateEngine: 'njk',

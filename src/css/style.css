@@ -6,6 +6,10 @@
 pre, code, .token {
     font-family: 'Lucida Sans', 'Lucida Sans Regular','Andale Mono', 'Ubuntu Mono', monospace;
     font-weight: 600;
+    font-size: inherit;
+}
+p pre, p code {
+    
     font-size: 0.9rem;
 }
 
@@ -41,7 +45,9 @@ nav, .nav-list {
     grid-template-columns: 30fr 70fr;
     gap: 3ch;
 }
-
+.featured--post .blog-title {
+    padding-left:0.25rem;
+}
 .excerptP {
     padding-left: 1rem;
 }
@@ -49,6 +55,15 @@ nav, .nav-list {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
+}
+#featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3ch;
+}
+.featured--post{
+    display: grid;
+    grid-template-rows: 35%;
 }
 
 /* Styles --------------- */
@@ -61,6 +76,13 @@ a {
 a:hover {
     color: hsl(202, 96%, 19%);
 }
+
+.featured--post {
+    padding: 0 0.75em;
+    outline: medium solid hsl(202, 96%, 19%);
+    border-radius: 0.5em;
+}
+
 /* Dark mode ------------ */
 @media (prefers-color-scheme: dark) {
     html {
@@ -76,5 +98,19 @@ a:hover {
     /* pre[class*="language-"],  */
     pre {
         background: hsl(70, 8%, 11%);
+    }
+    .featured--post {
+        outline-color: hsl(48, 33%, 97%);
+    }
+}
+@media (max-width: 750px) {
+    #featured {
+        grid-template-columns: 1fr;
+    }
+    .featured--excerpt {
+        display: none;
+    }
+    .featured--post {
+        margin: 0.5rem max(2rem, 15vw);
     }
 }
