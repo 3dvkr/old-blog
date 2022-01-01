@@ -215,19 +215,19 @@ console.log(thirdChicken['nickname']);
 ### Conventional Parameter Names
 
 ```javascript
-key -- like key-value pairs
-val -- value
-num -- number
-arr -- array
-obj -- object
+key — like key-value pairs
+val — value
+num — number
+arr — array
+obj — object
 
-e -- event
-el -- element
+e — event
+el — element
 
-res -- response
-req -- request
-rej -- reject
-err -- error
+res — response
+req — request
+rej — reject
+err — error
 ```
 
 

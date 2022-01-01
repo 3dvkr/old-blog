@@ -43,7 +43,7 @@ Over time, I knew enough to be curious about certain aspects of a concept. I now
 
 If I see an exercise that challenges me, or I have **a bit of code that isn't working**, I document my process of working through it using multi-sided cards. *Side 1: Why wouldn't this work? Side 2: what are some ways to fix it? Side 3: What ended up being the solution?* These cards go in the main bootcamp deck. 
 
-Sometimes I follow my guidelines and still see a card during review that I don't like. It reads funny, it's too vague, it's too nit-picky--something about it annoys me. So **I edit my cards a lot**. I'll add missing info, or put hints behind clozures, among other things. If I don't like a card, and don't know how to fix it, I literally write "I don't like this card" to let me know it's okay to move on quickly. My future and hopefully more learned self can revise them. 
+Sometimes I follow my guidelines and still see a card during review that I don't like. It reads funny, it's too vague, it's too nit-picky—something about it annoys me. So **I edit my cards a lot**. I'll add missing info, or put hints behind clozures, among other things. If I don't like a card, and don't know how to fix it, I literally write "I don't like this card" to let me know it's okay to move on quickly. My future and hopefully more learned self can revise them. 
 
 ### How do I use my cards?
 
@@ -51,7 +51,7 @@ I try to cap review sessions at around 20-30 minutes. This is the amount of time
 
 For some clozures, I might come up with two guesses before uncovering. If it's not a technical/designated word, I count any synonym of the answer as a correct response. If my answer is a lucky guess, I may mark it down as an incorrect response.
 
-With some cards, there's really only one way to move on: say what's on the other side of the card. For other cards, especially where there's code, I go through them like I'm an enthusiastic museum visitor--a little slower, and with a keen eye.
+With some cards, there's really only one way to move on: say what's on the other side of the card. For other cards, especially where there's code, I go through them like I'm an enthusiastic museum visitor—a little slower, and with a keen eye.
 
 The app picks out certain cards to review for the day. That's where I start, but I might veer off to other cards because of the bi-directional links, or because of other concepts I remember. That burst of natural interest is a random but significant boost to my learning process, and I try not to let it go to waste.
 

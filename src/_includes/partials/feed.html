@@ -4,10 +4,10 @@
     {% for item in collections.posts.slice(0,5) %}
     <p class="date">{{ item.data.date.toDateString() }}</p>
     <article>
-        <p class="blog-title">
+        <h3 class="blog-title">
             <a href="{{ item.url }}" class="" data-frame="quaternary">{{item.data.title}}
             </a> 
-        </p>
+        </h3>
         <p class="excerptP">{{ item.data.excerpt }}</p>
     </article>
     {% endfor %}
