@@ -2,7 +2,6 @@
 title: "JavaScript Part 3: Playing Rock-Paper-Scissors-Lizard-Spock"
 date: 2021-03-10
 tags: ["javascript"]
-featured: 11
 featuredTitle: "JS Part 3: Rock-Paper-Scissors-Lizard-Spock"
 excerpt: "This is an example of writing JavaScript code, using syntax covered in Parts 1 and 2."
 ---

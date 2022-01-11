@@ -11,7 +11,7 @@ Thumbs.db
 netlify.toml
 # Node modules and output
 node_modules
-# dist
+dist
 src/_includes/css
 
 # tests

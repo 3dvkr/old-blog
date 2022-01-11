@@ -1,7 +1,6 @@
 <h2>{{featuredList.title}}</h2>
-<section id="featured">
-
-{% for post in collections.featured.slice(0,3) %}
+<section class="featured">
+{% for post in collections.featured.slice(0,featuredList.limit) %}
     <article class="featured--post">
         <h3 class="blog-title">
             <a href="{{ post.url }}" class="" data-frame="quaternary">{{post.data.featuredTitle or post.data.title}}
