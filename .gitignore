@@ -8,8 +8,15 @@ Thumbs.db
 .sass-cache
 .env
 .cache
-
+netlify.toml
 # Node modules and output
 node_modules
 dist
 src/_includes/css
+
+# tests
+posts
+drafts
+test1.md
+test2.md
+test3.md

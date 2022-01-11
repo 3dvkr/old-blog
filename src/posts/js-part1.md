@@ -35,7 +35,7 @@ let fourthChicken = 'Colonel Sanders';
 ```
 *"I wish there was a better and faster way..."*
 
-We're allowed to reassign (using `=`) these throughout the code, but won't use 'let' again, because we can only *declare* a specific variable *once* per code.
+Before we move on, here are a few more notes on the code above. We're allowed to reassign (using `=`) these throughout the code, but won't use 'let' again, because we can only *declare* a specific variable *once* per code.
 
 #### Notes on how to name variables
 Variable names are made up on the spot.
@@ -71,7 +71,6 @@ console.log(chickenNames[3]);
 console.log(chickenNames[4]);
 ```
 
-
 *"I wish there was a better and faster way..."*
 ### Iterating: going over each thing/element in a grouping of info 
 
@@ -91,7 +90,6 @@ for (let counter = 0; counter < chickenQty; counter++) {
     console.log(chickenNames[i]);
     }
 ```
-
 
 `{}` are called curly brackets or curly braces. They section off the instructions that run every time the for-loop runs. This is one of two important uses for curly braces. We'll see the second one shortly.
 
@@ -217,19 +215,19 @@ console.log(thirdChicken['nickname']);
 ### Conventional Parameter Names
 
 ```javascript
-key -- like key-value pairs
-val -- value
-num -- number
-arr -- array
-obj -- object
+key — like key-value pairs
+val — value
+num — number
+arr — array
+obj — object
 
-e -- event
-el -- element
+e — event
+el — element
 
-res -- response
-rej -- reject
-req -- request
-err -- error
+res — response
+req — request
+rej — reject
+err — error
 ```
 
 

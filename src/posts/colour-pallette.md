@@ -50,7 +50,7 @@ Here is the HTML code. In the first section, there are three `div` containers wh
 ```
 ## Building the app with JavaScript
 
-Most objects and methods in this project's JavaScript code are from the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) [API](/posts/whats-an-api). Instead of for-loops, we'll use arrays and the `forEach` method. To parse values, we'll use the `slice` and `splice` methods on strings and arrays. To generate random values, we'll use the `Math` module.
+Most objects and methods in this project's JavaScript code are from the [DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction). Instead of for-loops, we'll use arrays and the `forEach` method. To parse values, we'll use the `slice` and `splice` methods on strings and arrays. To generate random values, we'll use the `Math` module.
 
 
 First, we'll need to assign the three inputs to variables, so we can access their values in response to user interaction.

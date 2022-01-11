@@ -2,11 +2,12 @@
 title: "JavaScript Part 3: Playing Rock-Paper-Scissors-Lizard-Spock"
 date: 2021-03-10
 tags: ["javascript"]
+featuredTitle: "JS Part 3: Rock-Paper-Scissors-Lizard-Spock"
 excerpt: "This is an example of writing JavaScript code, using syntax covered in Parts 1 and 2."
 ---
 Conditional logic is one of the most universal concepts in programming. Conditionals let us gate off sections of code, and these sections only run if the condition is met. For simple conditions, the well-worn if-else statement works. 
 
-But what happens when we want multiple conditions to be true? We can either have multiple nested if-statements, or we can stitch the conditions with the AND operator (`&&`) or the OR operator (`||`). Both options are difficult to write and difficult to read--it's probably just as difficult to maintain. This tutorial will explore an alternative to the well-known if-else structure: we're going to use an object's key-value pairs.
+But what happens when we want multiple conditions to be true? We can either have multiple nested if-statements, or we can stitch the conditions with the AND operator (`&&`) or the OR operator (`||`). Both options are difficult to write and difficult to read—it's probably just as difficult to maintain. This tutorial will explore an alternative to the well-known if-else structure: we're going to use an object's key-value pairs.
 
 ## ...by playing Rock-Paper-Scissors-Lizard-Spock?
 
@@ -16,7 +17,7 @@ We'll start with setting up the simpler Rock-Paper-Scissors, and we'll put it to
 - scissors beats paper
 - paper beats rock
 
-## Rock-Paper-Scissors using `if/else if/else`
+## Rock-Paper-Scissors using `if` / `else if` / `else`
 
 In our game, the player will be competing with a bot. We have two tasks to perform: choosing a move for the bot, and determining the winner. We will need to write two functions. To choose a move, we'll have `Math.random` return a number and then use conditional statements to return a move based on that number.
 ```javascript
@@ -33,14 +34,14 @@ We'll call the `rockPaperScissors` function to choose a move for the bot, and di
 
 ```javascript
 function playRPS(playChoice) {
-  let botPlay = rockPaperScissors();
-  console.log("Bot's choice is : " + botPlay);
-  if (botPlay == playChoice) {
+  let botChoice = rockPaperScissors();
+  console.log("Bot's choice is : " + botChoice);
+  if (botChoice == playChoice) {
     return "TIE";
   } else if (
-    (botPlay == "rock" && playChoice == "paper") ||
-    (botPlay == "paper" && playChoice == "scissors") ||
-    (botPlay == "scissors" && playChoice == "rock")
+    (botChoice == "rock" && playChoice == "paper") ||
+    (botChoice == "paper" && playChoice == "scissors") ||
+    (botChoice == "scissors" && playChoice == "rock")
   ) {
     return "WIN";
   } else {
@@ -48,7 +49,7 @@ function playRPS(playChoice) {
   }
 }
 ```
-The first condition (`botPlay == playChoice`) compares two strings--the two moves--and this is enough to decide that the game results in a tie. The else-statement doesn't have a condition, because it's the code that runs if none of the previous conditions are true. Now we turn to the win-conditions in the `else if`-statement. There are three moves that our player can choose from, and each option has only one corresponding move that it can beat. This leaves us with 3 * 1 conditions, and we stitch them together with the two logical operators.
+The first condition (`botChoice == playChoice`) compares two strings—the two moves—and this is enough to decide that the game results in a tie. The else-statement doesn't have a condition, because it's the code that runs if none of the previous conditions are true. Now we turn to the win-conditions in the `else if`-statement. There are three moves that our player can choose from, and each option has only one corresponding move that it can beat. This leaves us with 3 * 1 conditions, and we stitch them together with the two logical operators.
 
 To help with readability, this `else if` condition goes on for three lines, with extra brackets, even though the AND operator operates before the OR operator. 
 
@@ -61,7 +62,7 @@ Here are the new win-conditions:
 - lizard beats paper or spock
 - spock beats scissors or rock
 
-Now, there are five moves that our player can choose from, and each option has two corresponding move that it can beat. We can write 5 * 2--that's *ten*--lines in that `else if` condition, or we could use objects to reduce all that code to one line.
+Now, there are five moves that our player can choose from, and each option has two corresponding move that it can beat. We can write 5 * 2—that's *ten*—lines in that `else if` condition, or we could use objects to reduce all that code to one line.
 
 ## Rewriting `rpsPlay` with objects
 
@@ -165,7 +166,7 @@ let playRPSLS = (choice) => {
     spock: ["scissors", "rock"],
   };
 
-  if (choice == bot) {
+  if (choice == botChoice) {
     return "TIE";
   } else if (winObj[choice].includes(botChoice)) {
     return "WIN";
@@ -177,4 +178,4 @@ let playRPSLS = (choice) => {
 
 ## Playing a game of Rock-Paper-Scissors-Lizard-Spock
 
-To play either game, we'll call the second function (`playRPS` or `playRPSLS`). In order to display the value it returns, we'll write the function call inside `console.log`. After the first and second function are defined in your console or written in your .js file, run `console.log(playRPSLS('rock'));`. You can replace `'rock'` with another choice. You can also have two bots play against each other--that is, having two random choices face off--by calling the first function inside the second function, and printing it: `console.log(playRPSLS(rpsls()));`. One way to extend your skills beyond this tutorial is to handle error-checking, as any typos result in an error.
+To play either game, we'll call the second function (`playRPS` or `playRPSLS`). In order to display the value it returns, we'll write the function call inside `console.log`. After the first and second function are defined in your console or written in your .js file, run `console.log(playRPSLS('rock'));`. You can replace `'rock'` with another choice. You can also have two bots play against each other—that is, having two random choices face off—by calling the first function inside the second function, and printing it: `console.log(playRPSLS(rpsls()));`. One way to extend your skills beyond this tutorial is to handle error-checking, as any typos result in an error.
