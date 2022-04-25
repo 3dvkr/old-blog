@@ -14,6 +14,8 @@
     <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="color-scheme-wrapper">
     <header>
     <nav aria-label="Primary">
         <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
@@ -27,22 +29,21 @@
               <a href="/tags/">Tags</a>
             </li>
             
-        </ul>
+            </ul>
     </nav>
 </header>
     <main tabindex="-1" id="main-content">
       
     
-    <h2></h2>
-<section id="featured">
-
+    <h2>Featured Posts</h2>
+<section class="featured">
 
     <article class="featured--post">
         <h3 class="blog-title">
-            <a href="/posts/2021-recap/" class="" data-frame="quaternary">2021 Projects and Writing Recap
+            <a href="/posts/how-to-answer-badly/" class="" data-frame="quaternary">How to answer questions badly
             </a>
         </h3>
-        <p class="featured--excerpt excerptP">This is like what Spotify comes up with at the end of the year, except I made it myself.</p>
+        <p class="featured--excerpt excerptP">Four strategies you already use!</p>
     </article>
     
     <article class="featured--post">
@@ -66,6 +67,15 @@
 
 <section class="feed-box">
     
+    <p class="date">Thu Apr 21 2022</p>
+    <article>
+        <h3 class="blog-title">
+            <a href="/posts/how-to-answer-badly/" class="" data-frame="quaternary">How to answer questions badly
+            </a> 
+        </h3>
+        <p class="excerptP">Four strategies you already use!</p>
+    </article>
+    
     <p class="date">Tue Dec 21 2021</p>
     <article>
         <h3 class="blog-title">
@@ -81,7 +91,7 @@
             <a href="/posts/linked-lists/" class="" data-frame="quaternary">Where does a linked list live?
             </a> 
         </h3>
-        <p class="excerptP">A model to think about simple data structures for beginners</p>
+        <p class="excerptP">A model to think about simple data structures</p>
     </article>
     
     <p class="date">Thu Sep 23 2021</p>
@@ -102,15 +112,6 @@
         <p class="excerptP">I wouldn&#39;t understand why I&#39;d blend together two repos except for what happened here.</p>
     </article>
     
-    <p class="date">Mon Jul 26 2021</p>
-    <article>
-        <h3 class="blog-title">
-            <a href="/posts/copilot/" class="" data-frame="quaternary">GitHub Co-Pilot as a personal tutor
-            </a> 
-        </h3>
-        <p class="excerptP">It just might be the get-out-of-tutorial-hell card we all need.</p>
-    </article>
-    
 </section>
 
 <a href="/tags">More Posts</a>
@@ -119,6 +120,11 @@
     
 
     </main>
-
+  </div>
   </body>
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
 </html>

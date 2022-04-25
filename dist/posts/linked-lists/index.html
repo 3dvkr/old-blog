@@ -18,6 +18,8 @@
     <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="color-scheme-wrapper">
     <header>
     <nav aria-label="Primary">
         <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
@@ -31,7 +33,7 @@
               <a href="/tags/">Tags</a>
             </li>
             
-        </ul>
+            </ul>
     </nav>
 </header>
     <main tabindex="-1" id="main-content">
@@ -44,7 +46,7 @@
         <a href="/tags/#javascript">javascript</a>
     
 </p>
-<p>A model to think about simple data structures for beginners</p>
+<p>A model to think about simple data structures</p>
 <p>The topic of linked lists is a common gateway into the world of data structures. I started paying attention to how someone comes to understand why we'd care about something that, at first, looks a lot like an array—and I saw a trend. Most explanations either emphasize the definition of a linked list conceptually with no mention of what the code looks like, or they walk through code without mentioning the reason for all this trouble when arrays look so much easier to write</p>
 <p>I made up a model to see if linked list behavior could feel intuitive.</p>
 <h2>How are arrays stored?</h2>
@@ -68,6 +70,11 @@
 <p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
 
     </main>
-
+  </div>
   </body>
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
 </html>

@@ -16,6 +16,8 @@
     <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="color-scheme-wrapper">
     <header>
     <nav aria-label="Primary">
         <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
@@ -29,39 +31,32 @@
               <a href="/tags/">Tags</a>
             </li>
             
-        </ul>
+            </ul>
     </nav>
 </header>
     <main tabindex="-1" id="main-content">
       
 <section id="availableTags">
     
-        <a href="#ux">ux</a>
-    
         <a href="#learning-strategies">learning-strategies</a>
+    
+        <a href="#ux">ux</a>
     
         <a href="#javascript">javascript</a>
     
         <a href="#design">design</a>
     
-        <a href="#project">project</a>
-    
         <a href="#memo">memo</a>
     
-        <a href="#git">git</a>
+        <a href="#project">project</a>
     
         <a href="#css">css</a>
+    
+        <a href="#git">git</a>
     
 </section>
 
 
-
-    <h2 id="ux">ux</h2>
-    <ul>
-    
-        <li><a href="/posts/colour-choices/">Confusing colour choices</a></li>
-    
-    </ul>
 
     <h2 id="learning-strategies">learning-strategies</h2>
     <ul>
@@ -71,6 +66,13 @@
         <li><a href="/posts/sandboxes-archery/">Sandboxes or Archery Ranges?</a></li>
     
         <li><a href="/posts/flashcards/">How to use flashcards when you hate flashcards</a></li>
+    
+    </ul>
+
+    <h2 id="ux">ux</h2>
+    <ul>
+    
+        <li><a href="/posts/colour-choices/">Confusing colour choices</a></li>
     
     </ul>
 
@@ -98,15 +100,10 @@
     
     </ul>
 
-    <h2 id="project">project</h2>
-    <ul>
-    
-        <li><a href="/posts/blog-rebuild/">I rebuilt my blog from scratch using 11ty</a></li>
-    
-    </ul>
-
     <h2 id="memo">memo</h2>
     <ul>
+    
+        <li><a href="/posts/how-to-answer-badly/">How to answer questions badly</a></li>
     
         <li><a href="/posts/2021-recap/">2021 Projects and Writing Recap</a></li>
     
@@ -114,10 +111,10 @@
     
     </ul>
 
-    <h2 id="git">git</h2>
+    <h2 id="project">project</h2>
     <ul>
     
-        <li><a href="/posts/franken-fixing-git-repos/">Franken-fixing git repositories</a></li>
+        <li><a href="/posts/blog-rebuild/">I rebuilt my blog from scratch using 11ty</a></li>
     
     </ul>
 
@@ -128,11 +125,23 @@
     
     </ul>
 
+    <h2 id="git">git</h2>
+    <ul>
+    
+        <li><a href="/posts/franken-fixing-git-repos/">Franken-fixing git repositories</a></li>
+    
+    </ul>
+
 
     
 
 
     </main>
-
+  </div>
   </body>
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
 </html>
