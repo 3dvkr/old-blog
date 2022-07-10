@@ -9,14 +9,11 @@ Thumbs.db
 .env
 .cache
 netlify.toml
-# Node modules and output
+
+package-lock.json
+
 node_modules
 dist
-src/_includes/css
 
-# tests
-posts
 drafts
-test1.md
-test2.md
-test3.md
+src/posts/*.md

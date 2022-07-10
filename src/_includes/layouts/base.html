@@ -18,10 +18,21 @@
     <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="moon-shadow"></div>
+    <div class="color-scheme-wrapper">
     {% include "partials/site-head.html" %}
     <main tabindex="-1" id="main-content">
-      {% block content %}{% endblock %}
+      {% block content %}
+      {% endblock %}
     </main>
-
+  </div>
   </body>
+
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
+
 </html>

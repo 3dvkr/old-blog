@@ -1,5 +1,4 @@
 <h2>{{feedSection.title}}</h2>
-
 <section class="feed-box">
     {% for item in collections.posts.slice(0,5) %}
     <p class="date">{{ item.data.date.toDateString() }}</p>
