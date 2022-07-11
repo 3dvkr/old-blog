@@ -9,6 +9,7 @@ Thumbs.db
 .env
 .cache
 netlify.toml
+settings.json
 
 package-lock.json
 

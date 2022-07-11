@@ -1,7 +1,5 @@
 <h2>{{featuredList.title}}</h2>
 <section class="featured">
-    {{collections | log}}
-    {{"collections" | log}}
 {% for post in collections.featured.slice(0,featuredList.limit) %}
     <article class="featured--post">
         <h3 class="blog-title">
