@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yes, But How?</title>
+	<subtitle></subtitle>
+	<link href="/feed.xml" rel="self"/>
+	<link href="/"/>
+	<updated>2022-04-22T00:00:00Z</updated>
+	<id></id>
+	<author>
+    <name></name>
+    <email></email>
+	</author>
+	
+    
+    <entry>
+      <title>How to answer questions badly</title>
+      <link href="/posts/how-to-answer-badly/"/>
+      <updated>2022-04-22T00:00:00Z</updated>
+      <id>/posts/how-to-answer-badly/</id>
+      <content type="html"><![CDATA[
+        <p>Four strategies you already use!</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>2021 Projects and Writing Recap</title>
+      <link href="/posts/2021-recap/"/>
+      <updated>2021-12-22T00:00:00Z</updated>
+      <id>/posts/2021-recap/</id>
+      <content type="html"><![CDATA[
+        <p>This is like what Spotify comes up with at the end of the year, except I made it myself.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>Where does a linked list live?</title>
+      <link href="/posts/linked-lists/"/>
+      <updated>2021-11-21T00:00:00Z</updated>
+      <id>/posts/linked-lists/</id>
+      <content type="html"><![CDATA[
+        <p>A model to think about simple data structures</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>Express-validator middleware</title>
+      <link href="/posts/express-validator/"/>
+      <updated>2021-09-24T00:00:00Z</updated>
+      <id>/posts/express-validator/</id>
+      <content type="html"><![CDATA[
+        <p>Rough notes to poke and prod at what this package does.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>Franken-fixing git repositories</title>
+      <link href="/posts/franken-fixing-git-repos/"/>
+      <updated>2021-08-18T00:00:00Z</updated>
+      <id>/posts/franken-fixing-git-repos/</id>
+      <content type="html"><![CDATA[
+        <p>I wouldn&#39;t understand why I&#39;d blend together two repos except for what happened here.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>GitHub Co-Pilot as a personal tutor</title>
+      <link href="/posts/copilot/"/>
+      <updated>2021-07-27T00:00:00Z</updated>
+      <id>/posts/copilot/</id>
+      <content type="html"><![CDATA[
+        <p>It just might be the get-out-of-tutorial-hell card we all need.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>I rebuilt my blog from scratch using 11ty</title>
+      <link href="/posts/blog-rebuild/"/>
+      <updated>2021-06-28T00:00:00Z</updated>
+      <id>/posts/blog-rebuild/</id>
+      <content type="html"><![CDATA[
+        <p>Isn&#39;t it shiny?</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>How I come up with CSS from scratch</title>
+      <link href="/posts/css-rules/"/>
+      <updated>2021-06-14T00:00:00Z</updated>
+      <id>/posts/css-rules/</id>
+      <content type="html"><![CDATA[
+        <p>I&#39;ve come up with a few rules of thumb to keep my stylesheets organized.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>Getting better at technical writing</title>
+      <link href="/posts/tech-writing-notes/"/>
+      <updated>2021-05-11T00:00:00Z</updated>
+      <id>/posts/tech-writing-notes/</id>
+      <content type="html"><![CDATA[
+        <p>I took some notes on UChicago&#39;s video on YouTube. Here are my takeaways.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>How to make a colour palette app</title>
+      <link href="/posts/colour-pallette/"/>
+      <updated>2021-04-22T00:00:00Z</updated>
+      <id>/posts/colour-pallette/</id>
+      <content type="html"><![CDATA[
+        <p>This is a beginner-friendly tutorial using HTML, CSS, and vanillaJS.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>HSL Values and Colour Pallettes</title>
+      <link href="/posts/hsl/"/>
+      <updated>2021-04-12T00:00:00Z</updated>
+      <id>/posts/hsl/</id>
+      <content type="html"><![CDATA[
+        <p></p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>JavaScript Part 3: Playing Rock-Paper-Scissors-Lizard-Spock</title>
+      <link href="/posts/js-part3/"/>
+      <updated>2021-03-10T00:00:00Z</updated>
+      <id>/posts/js-part3/</id>
+      <content type="html"><![CDATA[
+        <p>This is an example of writing JavaScript code, using syntax covered in Parts 1 and 2.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>JavaScript Part 2: how do we juggle information and why would we want to?</title>
+      <link href="/posts/js-part2/"/>
+      <updated>2021-02-16T00:00:00Z</updated>
+      <id>/posts/js-part2/</id>
+      <content type="html"><![CDATA[
+        <p>This is a syntax-focused sprint that delves into functions, expanding on the code from Part 1.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>JavaScript Part 1: how do we hold on to information?</title>
+      <link href="/posts/js-part1/"/>
+      <updated>2021-01-30T00:00:00Z</updated>
+      <id>/posts/js-part1/</id>
+      <content type="html"><![CDATA[
+        <p>This is a syntax-focused sprint from simple data structures to objects. See Part 2 for loops, and functions/ methods.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>Confusing colour choices</title>
+      <link href="/posts/colour-choices/"/>
+      <updated>2020-12-28T00:00:00Z</updated>
+      <id>/posts/colour-choices/</id>
+      <content type="html"><![CDATA[
+        <p>Here&#39;s a question that should be simple enough: which of these two options is selected?</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>Sandboxes or Archery Ranges?</title>
+      <link href="/posts/sandboxes-archery/"/>
+      <updated>2020-11-30T00:00:00Z</updated>
+      <id>/posts/sandboxes-archery/</id>
+      <content type="html"><![CDATA[
+        <p>A quick framework for learning.</p>
+      ]]></content>
+    </entry>
+	
+    
+    <entry>
+      <title>How to use flashcards when you hate flashcards</title>
+      <link href="/posts/flashcards/"/>
+      <updated>2020-11-20T00:00:00Z</updated>
+      <id>/posts/flashcards/</id>
+      <content type="html"><![CDATA[
+        <p>I hate flashcards, but they&#39;re growing on me. Here&#39;s how I&#39;ve gone about it.</p>
+      ]]></content>
+    </entry>
+	
+</feed>

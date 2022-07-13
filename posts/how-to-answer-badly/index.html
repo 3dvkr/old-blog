@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      
+        How to answer questions badly — 
+      
+      Yes, But How?
+    </title>
+    
+      <link rel="canonical" href=https://3dvkr.github.io/posts/how-to-answer-badly/>
+    
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+  </head>
+  <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="moon-shadow"></div>
+    <div class="color-scheme-wrapper">
+    <header>
+    <nav aria-label="Primary">
+        <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
+        <ul class="nav-list">
+            
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            
+            <li>
+              <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+              <a href="/feed.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+    <main tabindex="-1" id="main-content">
+      
+
+<h2>How to answer questions badly</h2>
+<p class="date">Thu Apr 21 2022</p>
+<p>Tags: 
+    
+        <a href="/tags/#memo">memo</a>
+    
+</p>
+<p>Four strategies you already use!</p>
+<p>Since January, I've met with hundreds of people who are learning how to code. I've listened to the questions they've asked, and the answers they've gotten—maybe a little too obsessively, which explains the hiatus from blogging. I saw an unusual pattern in some of the back-and-forth. It's unusual, because I'd only ever come across it in conversations between experts and beginners. I couldn't really figure out what was so different. Then I stumbled on an article about a gif with ducks.</p>
+<h2>Ducks?</h2>
+<p>Here's a link to an <a href="http://www.slate.com/blogs/lexicon_valley/2014/06/20/at_least_ten_ducks_why_this_caption_is_funny_explained_by_gricean_maxims.html">article about a duck gif by Dr. Gretchen McCulloch</a>. If you'd like to skip the article for now, the gif shows ducks completely covering a road in a large city, to the point that the actual road is barely visible. They're all running in the same direction. The top comment on the gif reads, &quot;Look at all these ducks there are at least ten [sic].&quot;</p>
+<p>That's really funny, but why? And what does it have to do with possibly improving conversations between expert and beginner developers?</p>
+<h2>The Cooperative Principle</h2>
+<p>The cooperative principle is from an area of linguistics called <em>pragmatics</em>. When we communicate with each other, the cooperative principle outlines four main assumptions, or maxims, when we're trying to understand the other person. In short, we assume:</p>
+<ol>
+<li>Quantity: the person will provide not too much and not too little information</li>
+<li>Quality: the person will provide information that is true or geniune</li>
+<li>Relevance: the information provided is related to the context of the conversation</li>
+<li>Manner: the information is communicated in a clear and efficient way</li>
+</ol>
+<p>Gretchen McCulloch's article dives into how &quot;there are at least ten&quot; violates this principle for the sake of humour. We're going to see how much of this principle is upheld in conversations between experts and beginners, what that depends on, and the consequences of 'bad' answers.</p>
+<details>
+<summary>An important note before we go any further</summary>
+I've never formally studied linguistics. It is a descriptive field, with no evaluative or prescriptive goals. In my searching and reaching out to linguistics scholars, I couldn't find an example of the cooperative principle being used to 'grade' conversations between experts and learners. My repurposing of it here is only to move forward a discussion I've been trying to have, and is not based on some fundamental function of the cooperative principle in research or real life.
+</details>
+<h2>Chunking</h2>
+<p>Chunking is the process where we take bits of information and group, or chunk, them together to store in our long-term memory. Our working memory is only able to hold a few chunks of information. Lets say we're working on a problem, and it requires us to draw connections between more pieces of information than our working memory's limit. If all of that information was unchunked, then the problem would feel unsolvable. If all the information required was grouped in three or four larger chunks, we'd have everything we need to solve the problem without exceeding our working memory's limit.</p>
+<p>Here's an example: 'dfghs' and 'apple' both have five pieces of information, or five letters, and yet 'apple' feels easier to remember, because the letters are chunked together into one word that we understand. That's because we speak English. What if we gave this task to someone that doesn't speak English, but can recognize letters from a Latin script? What about someone who was unfamiliar with both English and Latin script? People from all three of these groups would be capable of remembering both sets of letters, but are dealing with differently formed chunks. This is makes a significant impact on how easy it would be to remember 'dfghs' and 'apple.'</p>
+<p>The <em>ways</em> and the <em>extent</em> that information has been chunked will also impact how we make sense of an answer.</p>
+<p>The chunking process has an impact on the cooperativeness of our answers. If we're unaware of this impact, we're going to see some very unwanted outcomes in recognizing competance, and in teaching newer developers. We'll see how in the next two sections.</p>
+<h2>The curse of knowledge</h2>
+<p>The curse of knowledge is where we forget what it's like to <em>not</em> know something after we've learned it, which makes it hard to explain a concept to someone who doesn't know about it yet. The default is to assume everyone has the same information that you have. What if there's another level to it: assuming everyone has the same information, and it all happens to be connected or chunked the same way?</p>
+<p>Lets say two people both have the pieces of information A, B, and C in their long-term memories. One person understands the information chunked together as AB and C. The other understands chunks the information as A and BC. We'll assume both ways are valid. In a scenario like a job interview, what if we asked about concept B immediately after asking about concept C, because that's how it's stored in our brains, too? The second person would probably look smarter, because while both people have the same information, the way we're asking them to retrieve that information gives one of them an unfair advantage.</p>
+<p>We may believe that if someone is unable to answer our question, then they don't know that information at all, and they shouldn't move forward. Based on our thought experiment in the last paragraph, we could actually be rejecting someone because they don't think the same way that we do. <strong>We're shrinking the diversity of thought on our dev teams.</strong></p>
+<h2>What happens when we don't give 'cooperative' answers?</h2>
+<p>At this point, we know that it's not up to the answer-giver to decide whether an answer is 'cooperative.' The cooperativeness of an answer depends on the answer-reciever, and how they've chunked information in their mind.</p>
+<p>This is in contrast to a general idea that if an answer is correct, then it is useful, because we're not factoring in the person receiving the answer at all. These kinds of answers can be of high <em>quality</em>, but any jargon or tangents result in the answer failing to meet the other three maxims (quantity, relevance, and manner).</p>
+<p>When we talk, we assume all four maxims are being observed. We assume the answers we recieve will address the pain point we're trying to resolve. And when an answer is consistently hard to understand, beginners in particular will question whether they belong in this field rather than the source from which they are seeking help.</p>
+<p><strong>When an answer is uncooperative, it is a probably unintentional but very real way to exclude someone from tech.</strong></p>
+<h2>Final notes</h2>
+<p>I'm still trying to distill my steps for giving cooperative answers. It will probably have to do with detecting mental models and the way that ideas are pre-chunked. This might be a future blog post.</p>
+<p>I'm grateful to <a href="https://twitter.com/DevEdBookClub">@DevEdBookClub</a> for their weekly discussions, where the gears for this post really started to turn. We're currently reading <em>The Programmer's Brain</em> by Felienne Hermans.</p>
+<p>Special thanks also to Dr. Sylvia Sierra (<a href="https://twitter.com/sociolinguista">@sociolinguista</a>) for the insightful advice about the research and literature on pragmatics, and for her recommendations for reading.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MPwpk-YgvjQ">Crash Course video on Pragmatics</a></li>
+<li><a href="http://www.slate.com/blogs/lexicon_valley/2014/06/20/at_least_ten_ducks_why_this_caption_is_funny_explained_by_gricean_maxims.html">Gretchen McCulloch's Slate article on the duck gif</a></li>
+<li><a href="https://www.manning.com/books/the-programmers-brain"><em>The Programmer's Brain</em> by Felienne Hermans</a></li>
+<li><a href="https://dev.to/devedbookclub">The DevEd Book Club</a></li>
+</ul>
+
+
+<p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
+
+    </main>
+  </div>
+  </body>
+
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
+
+</html>

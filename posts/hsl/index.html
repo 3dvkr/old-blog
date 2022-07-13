@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      
+        HSL Values and Colour Pallettes — 
+      
+      Yes, But How?
+    </title>
+    
+      <link rel="canonical" href=https://3dvkr.github.io/posts/hsl/>
+    
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+  </head>
+  <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="moon-shadow"></div>
+    <div class="color-scheme-wrapper">
+    <header>
+    <nav aria-label="Primary">
+        <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
+        <ul class="nav-list">
+            
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            
+            <li>
+              <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+              <a href="/feed.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+    <main tabindex="-1" id="main-content">
+      
+
+<h2>HSL Values and Colour Pallettes</h2>
+<p class="date">Sun Apr 11 2021</p>
+<p>Tags: 
+    
+        <a href="/tags/#design">design</a>
+    
+</p>
+<p></p>
+<p>There are three main ways to choose a colour in CSS: RGB values, HEX values, and HSL values. If our goal was to choose one colour, any of these three ways would work equally well. If, however, we wanted to choose colours that work well together, HSL provides the 'dials' we need to make this process much more straightforward.</p>
+<p>To use HSL, we require three numbers to pick the colour: hue, saturation, and lightness.</p>
+<h2>Hue</h2>
+<p>Imagining a clock's face, 12 o'clock is 0 degrees and points to red. Going clockwise 120 degrees is green, and going another 120 degrees  is blue. Going around the clock with those three landmarks in mind, you can select the 'colour' or hue by choosing the corresponding number between 0 and 360. The colours are in the same order as in a rainbow. This clock's face is called a colour wheel.</p>
+<h2>Saturation</h2>
+<p>This is a measure of how much of the hue to display, from 0% to 100%. A complete lack of saturation (0%) is grey, and changing the hue has no impact on the colour. There is less and less greyness as the value increases. A saturation above 85% results in very bold and vibrant colours.</p>
+<h2>Lightness</h2>
+<p>Lightness is also measured from 0% to 100%. At 0%, the colour is black, and at 100%, the colour is white, regardless of the other two values. We can initially set the lightness to 50%, and revisit it after deciding on the first two values.</p>
+<h2>Colour Pallettes</h2>
+<p>There are several ways to choose a set of colours that work well together. Here are three possible pallettes:</p>
+<h3>Monochromatic</h3>
+<p>For a monochromatic pallette, choose the same hue and saturation values for all the colours, and have a variety of lightness values.</p>
+<h3>Complementary</h3>
+<p>For complementary colours, choose two colours that are across from each other on the colour wheel. This means their hues are 180 degrees apart.</p>
+<h3>Tertiary</h3>
+<p>Tertiary colours are a set of three colours spaced evenly around the wheel. This means the hues of the colours will be 120 degrees apart.</p>
+
+
+<p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
+
+    </main>
+  </div>
+  </body>
+
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
+
+</html>

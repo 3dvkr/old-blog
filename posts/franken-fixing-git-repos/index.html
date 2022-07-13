@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      
+        Franken-fixing git repositories — 
+      
+      Yes, But How?
+    </title>
+    
+      <link rel="canonical" href=https://3dvkr.github.io/posts/franken-fixing-git-repos/>
+    
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script async data-respect-dnt src="https://cdn.splitbee.io/sb.js"></script>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+  </head>
+  <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="moon-shadow"></div>
+    <div class="color-scheme-wrapper">
+    <header>
+    <nav aria-label="Primary">
+        <a href="/" class="site_title"><h1>Yes, But How?</h1></a>
+        <ul class="nav-list">
+            
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            
+            <li>
+              <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+              <a href="/feed.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+    <main tabindex="-1" id="main-content">
+      
+
+<h2>Franken-fixing git repositories</h2>
+<p class="date">Tue Aug 17 2021</p>
+<p>Tags: 
+    
+        <a href="/tags/#git">git</a>
+    
+</p>
+<p>I wouldn&#39;t understand why I&#39;d blend together two repos except for what happened here.</p>
+<p>In short, <code>--allow-unrelated-histories</code> saved the day. This is what happened.</p>
+<h2>The mistake</h2>
+<p>Imagine this. You're setting up a repo for a full stack application. You start with a blank folder, add a README.md, commit the file, and push to your remote. Then you set up the back end files, and create a folder for the front-end with <code>npx create-react-app client</code>. Knowing that <code>create-react-app</code> makes another git repo, you delete the client folder's <code>.git</code> folder, so it doesn't clash with the one in the root of the project. At least, that's what you <em>think</em> you've done.</p>
+<p>You clean out other files in the React app's <code>src</code> folder, add a few more lines of code, and think, <em>This is probably a good time for another commit.</em> You try to add the changes, and out of no where, you're met with this: <code>fatal: not a git repository (or any of the parent directories): .git</code>. Oh no.</p>
+<h2>The panic</h2>
+<p>You can't just clone the repo again. That would undo all your work. So you try a new <code>git init</code>, and see if you can just join this history up with the one on the remote repo. In fact, you make a new branch, named <code>dev</code>, so that you can do a pull request on GitHub. You search for the button, but it's not there. GitHub is not giving you the option to do a PR, because the main branch and new branch have &quot;unrelated histories.&quot;</p>
+<p>You're not that far into the project. You could delete the remote repo, make a new one, and have this be your first commit. If you don't admit to any of this in a blogpost, no one would even know. But on second thought—</p>
+<h2>The fix</h2>
+<p>Okay. Recap: The remote has two branches: <code>main</code> which only has a README.md, and <code>dev</code> which contains all of the work since. We can't merge them, because they have unrelated histories. On our local machine, we have two branches. They both contain the all the code since the first commit.</p>
+<h3>Step 1</h3>
+<p>Switch to the <code>main</code> branch, and run <code>git fetch --all</code>. This makes your local machine know what's the state of all remote branches.</p>
+<h3>Step 2</h3>
+<p>Run <code>git reset --hard origin/main</code>. Now, the local machine branches are like the ones in the remote repo. Our <code>main </code>branch only has the README.md, and our <code>dev</code> branch has all the work since.</p>
+<h3>Step 3</h3>
+<p>We know <code>git merge dev</code> won't work, because of the &quot;unrelated histories,&quot; as we saw on GitHub. We'll need something stronger. Run <code>git merge dev --allow-unrelated-histories</code>—what a sensibly named flag—and <code>git push</code> the changes to the remote repo. The <code>main</code> branch now has the second commit.</p>
+<h3>Step 4</h3>
+<p>Realize that <code>git pull --allow-unrelated-histories</code> was an option way back in Step 1, but with the slower way, you could keep an eye on what was happening. We generally don't want to mix together two repos.</p>
+
+
+<p>Thanks for reading! I hope it was useful. I'd love to hear your thoughts over on <a href=https://twitter.com/_dvkr>Twitter</a>.</p>
+
+    </main>
+  </div>
+  </body>
+
+  <script>
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; 
+    const checkbox = document.querySelector(".checkbox");
+    if (prefersDarkMode) checkbox.checked = true;
+  </script>
+
+</html>
