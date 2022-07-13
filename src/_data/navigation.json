@@ -8,6 +8,10 @@
       {
         "text": "Tags",
         "url": "/tags/"
+      },
+      {
+        "text": "RSS",
+        "url": "/feed.xml"
       }
     ]
   }
